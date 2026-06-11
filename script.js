@@ -39,7 +39,7 @@ document.getElementById('hero-v').addEventListener('change', function () {
 window.addEventListener('load', () => {
   if (typeof QRCode !== 'undefined') {
     new QRCode(document.getElementById('qrcode'), {
-      text: 'https://elenah197.github.io/eine-stadt-in-2100',
+      text: 'https://eine-stadt-in-2100.vercel.app',
       width: 80,
       height: 80,
       colorDark: '#1a1a1a',
