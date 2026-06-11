@@ -39,11 +39,13 @@ document.getElementById('hero-v').addEventListener('change', function () {
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
-document.querySelectorAll('.gallery-item img').forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightbox.classList.add('open');
-  });
+document.querySelector('.gallery').addEventListener('click', (e) => {
+  const item = e.target.closest('.gallery-item');
+  if (!item) return;
+  const img = item.querySelector('img[src]');
+  if (!img || !img.src) return;
+  lightboxImg.src = img.src;
+  lightbox.classList.add('open');
 });
 
 document.getElementById('lightbox-close').addEventListener('click', () => {
