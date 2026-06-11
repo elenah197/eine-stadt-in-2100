@@ -35,20 +35,6 @@ document.getElementById('hero-v').addEventListener('change', function () {
   });
 });
 
-// QR Code
-window.addEventListener('load', () => {
-  if (typeof QRCode !== 'undefined') {
-    new QRCode(document.getElementById('qrcode'), {
-      text: 'https://eine-stadt-in-2100.vercel.app',
-      width: 80,
-      height: 80,
-      colorDark: '#1a1a1a',
-      colorLight: '#f5f4f0',
-      correctLevel: QRCode.CorrectLevel.M
-    });
-  }
-});
-
 // Nav background on scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
